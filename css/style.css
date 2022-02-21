@@ -17,11 +17,22 @@ body {
 .header {
     height: 95vh;
     background-image: linear-gradient(to right bottom,
-    #a78cac89, 
-    #b655e063),
+    #a78cacdb, 
+    #b655e09c),
     url("https://i.imgur.com/BAGCcoQ.jpg"
     );
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.logo {
+    height: 85px;
 }
