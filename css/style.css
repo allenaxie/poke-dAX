@@ -11,10 +11,16 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
+    padding: 30px;
 }
 
 .header {
     height: 95vh;
-    background-image: url("https://i.imgur.com/BAGCcoQ.jpg");
+    background-image: linear-gradient(to right bottom,
+    #a78cac89, 
+    #b655e063),
+    url("https://i.imgur.com/BAGCcoQ.jpg"
+    );
     background-size: cover;
+    background-position: center;
 }
