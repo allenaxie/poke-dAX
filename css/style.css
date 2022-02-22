@@ -39,13 +39,17 @@ body {
 /* Heading text */
 .text-box {
     position: absolute;
+    /* top and left % of parent element */
     top: 40%;
     left: 50%;
+    /* translate % of itself */
     transform:translate(-50%, -50%);
 }
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    /* sometimes fixes animation shakiness */
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -53,6 +57,11 @@ body {
     font-size: 2.7rem;
     font-weight: 400;
     letter-spacing: 30px;
+    animation: moveInLeft 1s ease-in-out forwards;
+
+    /* animation-delay: 3s;
+    animation-iteration-count: 3;
+    */
 }
 
 .heading-primary-sub {
@@ -60,4 +69,32 @@ body {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 11px;
+    animation: moveInRight 1s forwards ease-in-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform:translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translate(0);
+    }
 }
