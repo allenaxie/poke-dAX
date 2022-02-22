@@ -13,12 +13,12 @@ body {
     color: #777;
     padding: 30px;
 }
-
+/* Header */
 .header {
     height: 95vh;
     background-image: linear-gradient(to right bottom,
-    #a78cacdb, 
-    #b655e09c),
+    #a78cacd4, 
+    #b655e0c4),
     url("https://i.imgur.com/BAGCcoQ.jpg"
     );
     background-size: cover;
@@ -26,7 +26,7 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
     position: relative;
 }
-
+/* Logo */
 .logo-box {
     position: absolute;
     top: 30px;
@@ -35,4 +35,29 @@ body {
 
 .logo {
     height: 85px;
+}
+/* Heading text */
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 2.7rem;
+    font-weight: 400;
+    letter-spacing: 30px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 11px;
 }
