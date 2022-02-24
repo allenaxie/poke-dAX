@@ -110,6 +110,7 @@ body {
     display: inline-block;
     border-radius: 100px;
     transition: all .2s;
+    position: relative;
 }
 
 .btn:hover {
@@ -118,7 +119,7 @@ body {
 }
 /* when button is clicked */
 .btn:active {
-    transform: translateY(-1px);
+    transform: translateY(2px) !important;
     box-shadow: 0 5px 10px rgba(0,0,0, .2);
 
 }
@@ -126,4 +127,42 @@ body {
 .btn-white {
     background-color: white;
     color:#777;
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform:translateY(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+/* pseudo element behind the button. Treated as child of the btn */
+.btn::after {
+    /* set most elements same as parent element  */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+    transition: all .5s;
+}
+
+.btn-white::after {
+    background-color: rgb(255, 255, 255);
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .6s ease-in-out .75s backwards;
 }
