@@ -1,17 +1,27 @@
 /* Universal CSS reset for all browsers */
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* tells all components on page to inherit box sizing property */
+    box-sizing: inherit;
 }
+
+html {
+    font-size: 62.5%;
+}
+
 /* inheritance: fonts */
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
+
 }
 /* Header */
 .header {
@@ -29,12 +39,12 @@ body {
 /* Logo */
 .logo-box {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 3rem;
+    left: 3rem;
 }
 
 .logo {
-    height: 85px;
+    height: 8.5rem;
 }
 /* Heading text */
 .text-box {
@@ -51,14 +61,14 @@ body {
     text-transform: uppercase;
     /* sometimes fixes animation shakiness */
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 2.7rem;
+    font-size: 4.3rem;
     font-weight: 400;
-    letter-spacing: 30px;
+    letter-spacing: 3rem;
     animation: moveInLeft 1s ease-in-out forwards;
 
     /* animation-delay: 3s;
@@ -68,19 +78,19 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: 400;
-    letter-spacing: 11px;
+    letter-spacing: 1.1rem;
     animation: moveInRight 1s forwards ease-in-out;
 }
 
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
     100% {
         opacity: 1;
@@ -91,10 +101,10 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
     100% {
         transform: translate(0);
@@ -106,21 +116,23 @@ body {
 {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    font-size: 1.6rem;
+
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0, .2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
 }
 /* when button is clicked */
 .btn:active {
-    transform: translateY(2px) !important;
-    box-shadow: 0 5px 10px rgba(0,0,0, .2);
+    transform: translateY(.2rem) !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
 
 }
 
@@ -131,7 +143,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform:translateY(2rem);
+        transform:translateY(3.2rem);
     }
     100% {
         opacity: 1;
@@ -146,7 +158,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
