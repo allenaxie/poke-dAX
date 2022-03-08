@@ -1,0 +1,19 @@
+/* Universal CSS reset for all browsers */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* tells all components on page to inherit box sizing property */
+    box-sizing: inherit;
+}
+
+html {
+    // this defines what 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+
+}

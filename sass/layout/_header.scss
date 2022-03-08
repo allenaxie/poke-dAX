@@ -1,0 +1,32 @@
+/* Header */
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+    $color-primary-light, 
+    $color-primary-dark),
+    url("https://i.imgur.com/BAGCcoQ.jpg");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+    position: relative;
+
+    /* Logo */
+    &__logo-box {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+    }
+    &__logo {
+        height: 8.5rem;
+    }
+    /* Heading text */
+    &__text-box {
+        position: absolute;
+        /* top and left % of parent element */
+        top: 40%;
+        left: 50%;
+        /* translate % of itself */
+        transform:translate(-50%, -50%);
+        text-align: center;
+    }
+}

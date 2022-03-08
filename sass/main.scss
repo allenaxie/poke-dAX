@@ -1,197 +1,22 @@
-$color-primary: #b655e0c4;
-$color-primary-light: #a78cacd4;
-$color-primary-dark:#b655e0c4;
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-/* Universal CSS reset for all browsers */
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    /* tells all components on page to inherit box sizing property */
-    box-sizing: inherit;
-}
+@import "components/button";
 
-html {
-    font-size: 62.5%;
-}
+@import "layout/header";
 
-/* inheritance:fonts */
-body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: $color-grey-dark;
-    padding: 3rem;
-    box-sizing: border-box;
-
-}
-/* Header */
-.header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,
-    $color-primary-light, 
-    $color-primary-dark),
-    url("https://i.imgur.com/BAGCcoQ.jpg");
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
-    position: relative;
-
-    /* Logo */
-    &__logo-box {
-        position: absolute;
-        top: 3rem;
-        left: 3rem;
-    }
-    &__logo {
-        height: 8.5rem;
-    }
-    /* Heading text */
-    &__text-box {
-        position: absolute;
-        /* top and left % of parent element */
-        top: 40%;
-        left: 50%;
-        /* translate % of itself */
-        transform:translate(-50%, -50%);
-        text-align: center;
-    }
-}
-
-.heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    /* sometimes fixes animation shakiness */
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-
-    &--main {
-        display: block;
-        font-size: 4.3rem;
-        font-weight: 400;
-        letter-spacing: 3rem;
-        animation: moveInLeft 1s ease-in-out forwards;
-        /* animation-delay: 3s;
-        animation-iteration-count: 3;
-        */
-    }
-    
-    &--sub {
-        display: block;
-        font-size: 3.2rem;
-        font-weight: 400;
-        letter-spacing: 1.1rem;
-        animation: moveInRight 1s forwards ease-in-out;
-    }
-}
+@import "pages/home";
 
 
 
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    80% {
-        transform: translateX(2rem);
-    }
-    100% {
-        opacity: 1;
-        transform:translate(0);
-    }
-}
 
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    80% {
-        transform: translateX(-2rem);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
 
-.btn {
-    &:link,
-    &:visited /* visited is when a link/btn has already been clicked (i.e. purple link */
-    {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        display: inline-block;
-        border-radius: 10rem;
-        transition: all .2s;
-        position: relative;
-        font-size: 1.6rem;
-    }
-
-    &:hover {
-        transform: translateY(-.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-black, .2);
-
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    }
-    /* when button is clicked */
-    &:active {
-        transform: translateY(.2rem) !important;
-        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
-
-    }
-
-    &--white {
-        background-color: $color-white;
-        color:$color-grey-dark;
-
-        &::after {
-            background-color: $color-white;
-        }
-    }
-    @keyframes moveInBottom {
-        0% {
-            opacity: 0;
-            transform:translateY(3.2rem);
-        }
-        100% {
-            opacity: 1;
-            transform: translate(0)
-        }
-    }
-
-    /* pseudo element behind the button. Treated as child of the btn */
-    &::after {
-        /* set most elements same as parent element  */
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index:-1;
-        transition: all .5s;
-    }
-
-    
-
-   
-
-    &--animated {
-        animation: moveInBottom .6s ease-in-out .75s backwards;
-    }
-}
 
 
 
