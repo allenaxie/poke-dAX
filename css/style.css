@@ -2,178 +2,147 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    /* tells all components on page to inherit box sizing property */
-    box-sizing: inherit;
-}
+  margin: 0;
+  padding: 0;
+  /* tells all components on page to inherit box sizing property */
+  box-sizing: inherit; }
 
 html {
-    font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 /* inheritance:fonts */
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: #777;
-    padding: 3rem;
-    box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
 
-}
 /* Header */
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,
-    #a78cacd4, 
-    #b655e0c4),
-    url("https://i.imgur.com/BAGCcoQ.jpg"
-    );
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
-    position: relative;
-}
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #a78cacd4, #b655e0c4), url("https://i.imgur.com/BAGCcoQ.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+
 /* Logo */
 .header__logo-box {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-}
+  position: absolute;
+  top: 3rem;
+  left: 3rem; }
 
 .header__logo {
-    height: 8.5rem;
-}
+  height: 8.5rem; }
+
 /* Heading text */
 .header__text-box {
-    position: absolute;
-    /* top and left % of parent element */
-    top: 40%;
-    left: 50%;
-    /* translate % of itself */
-    transform:translate(-50%, -50%);
-    text-align: center;
-}
+  position: absolute;
+  /* top and left % of parent element */
+  top: 40%;
+  left: 50%;
+  /* translate % of itself */
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    /* sometimes fixes animation shakiness */
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-}
+  color: #fff;
+  text-transform: uppercase;
+  /* sometimes fixes animation shakiness */
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
 
 .heading-primary--main {
-    display: block;
-    font-size: 4.3rem;
-    font-weight: 400;
-    letter-spacing: 3rem;
-    animation: moveInLeft 1s ease-in-out forwards;
-
-    /* animation-delay: 3s;
+  display: block;
+  font-size: 4.3rem;
+  font-weight: 400;
+  letter-spacing: 3rem;
+  animation: moveInLeft 1s ease-in-out forwards;
+  /* animation-delay: 3s;
     animation-iteration-count: 3;
-    */
-}
+    */ }
 
 .heading-primary--sub {
-    display: block;
-    font-size: 3.2rem;
-    font-weight: 400;
-    letter-spacing: 1.1rem;
-    animation: moveInRight 1s forwards ease-in-out;
-}
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 1.1rem;
+  animation: moveInRight 1s forwards ease-in-out; }
 
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    80% {
-        transform: translateX(2rem);
-    }
-    100% {
-        opacity: 1;
-        transform:translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    80% {
-        transform: translateX(-2rem);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    transform: translate(0); } }
 
 .btn:link,
-.btn:visited /* visited is when a link/btn has already been clicked (i.e. purple link */
-{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-}
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
 
 .btn:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
-}
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
 /* when button is clicked */
 .btn:active {
-    transform: translateY(.2rem) !important;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-
-}
+  transform: translateY(0.2rem) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-    background-color: white;
-    color:#777;
-}
+  background-color: #fff;
+  color: #777; }
+
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform:translateY(3.2rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0)
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateY(3.2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /* pseudo element behind the button. Treated as child of the btn */
 .btn::after {
-    /* set most elements same as parent element  */
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index:-1;
-    transition: all .5s;
-}
+  /* set most elements same as parent element  */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .5s; }
 
 .btn--white::after {
-    background-color: rgb(255, 255, 255);
-}
+  background-color: #fff; }
 
 .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
 
 .btn--animated {
-    animation: moveInBottom .6s ease-in-out .75s backwards;
-}
+  animation: moveInBottom .6s ease-in-out .75s backwards; }
