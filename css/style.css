@@ -84,12 +84,28 @@ body {
     transform: skewY(2deg) skewX(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem; }
+
+.u-margin-bottom-large {
   margin-bottom: 8rem; }
 
 .btn {
@@ -157,6 +173,22 @@ body {
     /* translate % of itself */
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.row {
+  display: flex;
+  padding: 2rem; }
+
+.col-1 {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.col-2 {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center; }
 
 .section-about {
   background-color: #f7f7f7;
