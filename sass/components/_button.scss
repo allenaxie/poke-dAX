@@ -53,11 +53,9 @@
         transition: all .5s;
     }
 
-    
-
-   
-
     &--animated {
         animation: moveInBottom .6s ease-in-out .75s backwards;
     }
 }
+
+
